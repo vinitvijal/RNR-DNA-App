@@ -21,7 +21,7 @@ export default function LoginScreen() {
 
   return (
     <View style={styles.container}>
-      <Image source={require('../assets/images/react-logo.png')} style={styles.logo} resizeMode="contain" />
+      <Image source={require('../assets/images/homelogo.png')} style={styles.logo} resizeMode="contain" />
       <Text style={styles.title}>Welcome Back</Text>
       <Text style={styles.subtitle}>Sign in to continue</Text>
       <TextInput
@@ -65,9 +65,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#FF5200',
   },
   logo: {
-    width: 100,
+    width: 300,
     height: 100,
-    marginBottom: 32,
+    marginBottom: 62,
   },
   title: {
     fontSize: 32,
