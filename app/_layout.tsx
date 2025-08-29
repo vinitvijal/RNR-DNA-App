@@ -1,12 +1,12 @@
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { useAuth } from '../hooks/useAuth';
+import HomeScreen from './home';
 import LoginScreen from './login';
 
 export default function RootLayout() {
@@ -25,12 +25,10 @@ export default function RootLayout() {
     return <LoginScreen />;
   }
 
+  // Show HomeScreen after login
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
+      <HomeScreen />
       <StatusBar style="auto" />
     </ThemeProvider>
   );
