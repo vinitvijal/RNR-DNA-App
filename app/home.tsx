@@ -5,37 +5,37 @@ import { Image, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, Vi
 const jobs = [
   {
     id: '1',
-    name: 'Sachin Gupta',
+    name: 'User 1',
     code: '#SG4343',
     jobId: '#JOBID',
     job: 'PTP',
     location: 'Location',
-    avatar: require('../assets/images/partial-react-logo.png'),
+    avatar: {uri: 'https://dummyjson.com/icon/abc123/150'},
     type: 'ongoing',
   },
   {
     id: '2',
-    name: 'Sachin Gupta',
+    name: 'User 2',
     code: '#SG4343',
     jobId: '#JOBID',
     job: 'Deepclean',
     location: 'Location',
-    avatar: require('../assets/images/react-logo.png'),
+    avatar: {uri: 'https://dummyjson.com/icon/sdfd789/150'},
     type: 'upcoming',
-    date: 'Date',
-    time: 'Time',
+    date: new Date('2025-08-30').toLocaleDateString(),
+    time: new Date('2025-08-30T14:00:00').toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
   },
   {
     id: '3',
-    name: 'Sachin Gupta',
+    name: 'User 3',
     code: '#SG4343',
     jobId: '#JOBID',
     job: 'Deepclean',
     location: 'Location',
-    avatar: require('../assets/images/react-logo.png'),
+    avatar: {uri: 'https://dummyjson.com/icon/dshjfks/150'},
     type: 'upcoming',
-    date: 'Date',
-    time: 'Time',
+    date: new Date('2025-08-31').toLocaleDateString(),
+    time: new Date('2025-08-31T19:00:00').toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
   },
 ];
 
@@ -44,7 +44,7 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.header}>
         <View style={styles.headerLeft}>
-          <Image source={require('../assets/images/react-logo.png')} style={styles.profilePic} />
+          <Image source={require('../assets/images/dummy.jpg')} style={styles.profilePic} />
           <View>
             <Text style={styles.profileName}>Raghav Jha</Text>
             <Text style={styles.online}>Online</Text>
@@ -105,7 +105,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#333',
+    backgroundColor: 'white'
   },
   header: {
     backgroundColor: '#fff',
